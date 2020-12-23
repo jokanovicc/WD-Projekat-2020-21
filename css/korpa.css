@@ -1,0 +1,25 @@
+.container{
+    margin-top: 40px;
+    background-color: white;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.cena{
+    font-size: 25px !important;
+    font-family: 'Economica', sans-serif;
+}
+
+
+h4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+*{
+    color: #044855;
+}

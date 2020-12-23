@@ -1,0 +1,213 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+body{
+    background-color: #044855;
+}
+
+nav{
+    background-color: #C0424E;
+    color: white;
+    width: 100%;
+
+}
+
+.navbar-brand{
+    position: absolute;
+    left: 50%;
+    margin-left: -105px !important;  /* 50% of your logo width */
+    display: block;
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: white;
+
+    
+}
+
+.korpa{
+    color: white;
+}
+.nav-link:hover{
+    color: #793F4e;
+}
+
+.jumbotron{
+    text-align: center;
+}
+
+.display-4{
+    font-family: 'Oswald', sans-serif;
+    font-size: 62px;
+
+    color: #044855;
+    
+}
+
+.registracija{
+    margin-top: 50px;
+    background-color: #C0424E;
+    border: none;
+    font-size: 20px;
+}
+
+.delim {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.slika1{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+
+}
+.glavna{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.card{
+    padding: 0;
+    width: fit-content;
+}
+
+.glavna p{
+    font-size: 80px;
+    color: white;
+    padding-bottom: 2px;
+    font-style: italic;
+    text-decoration: underline;
+    margin-right: 20px;
+    text-align: center;
+
+}
+
+.dugme{
+    background-color: #C0424E;
+    margin: 25px 25px;
+    font-size: 25px;
+    border: none;
+    color: white;
+}
+
+.labela{
+    font-size: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.labelaDatum{
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 15px;
+
+}
+
+.sekcija{
+    border: 2px;
+    height: 2px;
+    border-radius: 40%;
+    background-color: white;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 40vh;
+    transform: scale(1.0);
+    }
+
+
+ 
+    .card{
+        width: 92%;
+        margin-top: 20px;
+        height: 85%;
+        background-color:  #e9ecef;
+    
+    }
+
+.naslovSekcije{
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+.naziv{
+    padding-top: 2%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #044855;
+}
+
+.naziv:hover{
+    color: #C0424E;
+}
+
+.pisac{
+    font-size: 20px;
+    padding-top: 1%;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.pisac:hover{
+    color: #C0424E;
+}
+
+
+.jumbotronTekst{
+    font-size: 23px;
+}
+
+.btn1{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    background-color: #C0424E;
+    color: white;
+}
+
+
+
+.cena{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Economica', sans-serif;
+}
+
+
+.levo{
+    float: left;
+}
+.desno{
+    float: right;
+}
+
+@media only screen and (max-width: 1200px){
+    .navbar-brand{
+        display: none;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 990px){
+    .card{
+        width: 66%;
+        margin: auto;
+
+    }
+
+
+}
