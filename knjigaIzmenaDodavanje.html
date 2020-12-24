@@ -155,94 +155,94 @@
 
 
     <!-- POP UP LOGIN -->
-        <div class="modal fade" id="modalLoginForm">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    <div class="modal fade" id="modalLoginForm">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <label data-error="wrong" data-success="right" for="korIme" class="labela">Korisničko ime</label>
+              <input type="text" id="korIme" class="form-control validate">
+            
             </div>
-            <div class="modal-body mx-3">
-              <div class="md-form mb-5">
-                <label data-error="wrong" data-success="right" for="defaultForm-email" class="labela">Korisničko ime</label>
-                <input type="email" id="defaultForm-email" class="form-control validate">
-              
-              </div>
-      
-              <div class="md-form mb-4">
-                <label data-error="wrong" data-success="right" for="defaultForm-pass" class="labela"  >Šifra</label>
-                <input type="password" id="defaultForm-pass" class="form-control validate">
-              </div>
-      
+    
+            <div class="md-form mb-4">
+              <label data-error="wrong" data-success="right" for="sifra" class="labela"  >Šifra</label>
+              <input type="password" id="sifra" class="form-control validate">
             </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button class="btn dugme">Dalje</button>
-            </div>
+    
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn dugme">Dalje</button>
           </div>
         </div>
-      </div>       
+      </div>
+    </div>       
 
-      <!-- pop up register -->
+    <!-- pop up register -->
 
 
 
 
-      <div class="modal fade" id="modalRegisterForm">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header text-center">
-              <h4 class="modal-title w-100"><strong>Registrovanje</strong></h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    <div class="modal fade" id="modalRegisterForm">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100"><strong>Registrovanje</strong></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-4">
+              <label  class="labela">Korisničko ime</label>
+              <input type="text"  class="form-control validate">          
             </div>
-            <div class="modal-body mx-3">
-              <div class="md-form mb-4">
-                <label  class="labela">Korisničko ime</label>
-                <input type="text"  class="form-control validate">          
+            <div class="md-form mb-4">
+              <label for="defaultForm-pass" class="labela"  >Šifra</label>
+              <input type="password" id="defaultForm-pass" class="form-control validate">
+            </div>
+            <div class="md-form mb-4">
+              <label class="labela">Email</label>
+              <input type="email"  class="form-control validate">          
+            </div>
+            <div class="md-form mb-4">
+              <label class="labela">Ime</label>
+              <input type="text"  class="form-control validate">          
+            </div>
+            <div class="md-form mb-4">
+              <label  class="labela">Prezime</label>
+              <input type="text"  class="form-control validate">          
+            </div>
+            <div class="form-group row">
+              <label for="example-date-input" class="labelaDatum">Datum Rodjenja</label>
+              <div class="col-10">
+                <input class="form-control validate" type="date" value="2020-08-19">
               </div>
-              <div class="md-form mb-4">
-                <label for="defaultForm-pass" class="labela"  >Šifra</label>
-                <input type="password" id="defaultForm-pass" class="form-control validate">
-              </div>
-              <div class="md-form mb-4">
-                <label class="labela">Email</label>
-                <input type="text"  class="form-control validate">          
-              </div>
-              <div class="md-form mb-4">
-                <label class="labela">Ime</label>
-                <input type="text"  class="form-control validate">          
-              </div>
-              <div class="md-form mb-4">
-                <label  class="labela">Prezime</label>
-                <input type="text"  class="form-control validate">          
-              </div>
-              <div class="form-group row">
-                <label for="example-date-input" class="labelaDatum">Datum Rodjenja</label>
-                <div class="col-10">
-                  <input class="form-control validate" type="date" value="2020-08-19">
-                </div>
-              </div>
-              <div class="md-form mb-4">
-                <label class="labela">Adresa</label>
-                <input type="text"  class="form-control validate">          
-              </div>
-              <div class="md-form mb-4">
-                <label  class="labela">Broj telefona</label>
-                <input type="text"  class="form-control validate">          
-              </div>
-      
+            </div>
+            <div class="md-form mb-4">
+              <label class="labela">Adresa</label>
+              <input type="text"  class="form-control validate">          
+            </div>
+            <div class="md-form mb-4">
+              <label  class="labela">Broj telefona</label>
+              <input type="number"  class="form-control validate">          
+            </div>
+    
 
-      
-            </div>
-            <div class="modal-footer d-flex justify-content-center">
-              <button class="btn dugme">Dalje</button>
-            </div>
+    
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn dugme">Dalje</button>
           </div>
         </div>
-      </div>      
+      </div>
+    </div>   
 
 
 
