@@ -90,31 +90,35 @@
             <form>
                 <div class="form-group">
                   <label for="korime">Korisnicko Ime</label>
-                  <input type="text" class="form-control" style="width: 80%;" id="korime" placeholder="Korisnicko Ime" required>
+                  <input type="text" class="form-control" id="korime"  required>
                 </div>
                 <div class="form-group">
                     <label for="loz">Lozinka</label>
-                    <input type="text" style="width: 50%;" class="form-control" id="loz" placeholder="Lozinka" required>
+                    <input type="text"  class="form-control" id="loz" placeholder="Lozinka" required>
                   </div>
                   <div class="form-group">
                     <label for="mail">Email</label>
-                    <input type="text" class="form-control" style="width: 80%;" id="mail" required>
+                    <input type="text" class="form-control"  id="mail"  required>
                   </div>
                   <div class="form-group">
                     <label for="prezime">Prezime</label>
-                    <input type="text" class="form-control" style="width: 70%;" id="prezime"  required>
+                    <input type="text" class="form-control"  id="prezime"  required>
+                  </div>
+                  <div class="form-group">
+                    <label for="prezime">Ime</label>
+                    <input type="text" class="form-control"  id="ime"  required>
                   </div>
                   <div class="form-group">
                     <label for="adresa">Adresa</label>
-                    <input type="text" class="form-control" style="width: 75%;" id="adresa" required>
+                    <input type="text" class="form-control"  id="adresa" required>
                   </div>
                   <div class="form-group">
                     <label for="brtel">Broj telefona</label>
-                    <input type="number" class="form-control" style="width: 40%;" id="brtel"  required>
+                    <input type="number" class="form-control"  id="brtel"  required>
                   </div>
                   <div class="form-group">
                     <label for="datum">Datum Rodjenja</label>
-                    <input type="date" class="form-control" style="width: 45%;" id="daum" required>
+                    <input type="date" class="form-control" id="datum" required>
                   </div>
   
 
@@ -233,6 +237,84 @@
       <!-- Copyright -->
     </footer>
     <!-- Optional JavaScript -->
+    <script>//funkcija koja ocitava vrednost URL parametra sa prosledjenim imenom
+      function getParamValue(name) {
+        var location = decodeURI(window.location.toString());
+        var index = location.indexOf("?")+1;
+        var subs = location.substring(index, location.length);
+        var splitted = subs.split("&");
+        
+      
+        for(i=0; i < splitted.length; i++) {
+              var s = splitted[i].split("=");
+              console.log(s);
+          var pName  = s[0];
+          var pValue = s[1].split();
+          if(pName == name) {
+            return pValue;
+          }
+        }	
+      }
+      
+      /*
+        Kada se stranica ucita, procitamo ime prijavljenog korisnika
+        iz 'user' parametra URL-a i upisemo ga u HTML element ciji je id 'userSpan'.
+      */
+      
+      var korisnik = getParamValue('user');
+      var userSpan = document.getElementById('korime');
+      userSpan.value = korisnik;
+
+
+
+
+      var korisnikI = getParamValue('ime');
+      var imeSpan = document.getElementById('ime');
+      imeSpan.value = korisnikI;
+
+
+      var korisnikP = getParamValue('prezime');
+      var prezimeSpan = document.getElementById('prezime');
+      prezimeSpan.value = korisnikP;
+
+
+      var korisnikA = getParamValue('adresa');
+      var adresaSpan = document.getElementById('adresa');
+      adresaSpan.value = korisnikA;
+
+
+      var korisnikE = getParamValue('email');
+      var eSpan = document.getElementById('mail');
+      eSpan.value = korisnikE;
+
+      var korisnikbt = getParamValue('brojTel');
+      var btSpan = document.getElementById('brtel');
+      btSpan.value = korisnikbt;
+
+
+      var korisnikL = getParamValue('lozinka');
+      var lpan = document.getElementById('loz');
+      lpan.value = korisnikL;
+
+
+      var korisnikDa = getParamValue('datumRodj');
+      var dapan = document.getElementById('datum');
+      dapan.value = korisnikDa;
+
+
+
+
+
+
+
+
+
+      
+
+      
+
+      
+      </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

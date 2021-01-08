@@ -15,9 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/mdb.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="css/knjige.css">
     <link rel="stylesheet" href="css/tabele.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>Home Page</title>
   </head>
   <body>
@@ -88,8 +91,11 @@
 
           <div class="container">
             <h1 style="text-align: center; padding-bottom: 20px;">Upravljanje Knjigama</h1>
+            <button type="button" id="getButton">GET</button>
 
-            <div class="row">
+            
+            <div class="row" id="app">
+              <h2>{{message}}</h2>
               <table class="table">
                 <thead>
                    <th>ISBN</th>
@@ -98,38 +104,15 @@
                    <th>Brisanje</th>
                    <th>Izmena</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="ISBN">122134321</td>
-                        <td data-label="Naziv">Na Drini Cuprija</td>
-                        <td data-label="Detalji"><a href="knjiga.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                        <td data-label="Brisanje"><a href="knjiga.html><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                        <td data-label="Izmena"><a href="#"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                    </tr>
-           
-                    <tr>
-                        <td data-label="ISBN">12214411</td>
-                        <td data-label="Naziv">Zlocin i Kazna</td>
-                      <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
+                <tbody id="allKnjige">
+                    <tr v-for="knjiga in knjige">
+                      <td>{{knjiga.isbn}}</td>
+                      <td>{{knjiga.naziv}}</td>
+                      <td data-label="Detalji"><button type="button" onclick="show()" class="btn btnKorisnici">*</button></a></td>
                       <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
                       <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                  </tr>
-           
-                  <tr>
-                    <td data-label="ISBN">12212321414</td>
-                    <td data-label="Naziv">Gorski Vijenac</td>
-                    <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                    <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                    <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                </tr>
-           
-                <tr>
-                    <td data-label="ISBN">34556546435</td>
-                    <td data-label="Naziv">Ana Kareljina</td>
-                  <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                  <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-                  <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">*</button></a></td>
-              </tr>
+
+                    </tr>
                 </tbody>
               </table>
               </div>
@@ -236,8 +219,46 @@
       
 
     <!-- Footer -->
+    <script>
 
-    <!-- Optional JavaScript -->
+
+      var app = new Vue({
+
+        el: '#app',
+        data:{
+          knjige: []
+        },
+        mounted: function(){
+
+          
+            axios.get('https://knjizara-6adf7-default-rtdb.firebaseio.com/knjige.json')
+            .then(response => {
+              this.knjige = response.data;
+              // handle success
+              console.log(response);
+
+
+            })
+
+
+            .catch(error => {
+              console.log(error);
+            })
+
+
+        }
+
+
+      })
+
+
+
+
+
+
+
+
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

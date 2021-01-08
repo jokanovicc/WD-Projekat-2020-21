@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="css/korisnik.css">
     <link rel="stylesheet" href="css/tabele.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <title>Home Page</title>
   </head>
   <body>
@@ -88,7 +91,7 @@
           <div class="container kontejnerKorisnici">
             <h1 style="text-align: center; padding-bottom: 20px;">Upravljanje Korisnicima</h1>
 
-            <div class="row">
+            <div class="row" id="app">
               <table class="table">
                 <thead>
                    <th>Korisničko ime</th>
@@ -98,44 +101,46 @@
                    <th>Izmena</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td data-label="Korisničko">perop</td>
-                        <td data-label="Email">petar@gmail.com</td>
-                        <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">...</button></a></td>
-                        <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">X</button></a></td>
-                        <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">I</button></a></td>
+                    <tr v-for="user in users" onclick='console.log("Hello")' >
+                        <td data-label="Korisničko">{{user.username}}</td>
+                        <td data-label="Email">{{user.email}}</td>
+                        <td data-label="Detalji"><a :href="'korisnik.html?user=' + user.username + '&email=' + user.email+ '&ime=' + user.ime+ '&prezime=' + user.prezime+ '&lozinka=' + user.password+ '&datumRodj=' + user.datumRodjenja+ '&adresa=' + user.adresa + '&brojTel=' + user.telefon"><button type="button" class="btn btnKorisnici">...</button></a></td>
+                        <td data-label="Brisanje"><button type="button" class="btn btnKorisnici" data-toggle="modal" data-target="#exampleModal">
+                          X
+                        </button></td>
+                        <td data-label="Izmena"><a :href="'korisnikIzmenaDodavanje.html?user=' + user.username + '&email=' + user.email+ '&ime=' + user.ime+ '&prezime=' + user.prezime+ '&lozinka=' + user.password+ '&datumRodj=' + user.datumRodjenja+ '&adresa=' + user.adresa + '&brojTel=' + user.telefon"><button type="button"  class="btn btnKorisnici">I</button></a></td>
                     </tr>
            
-                    <tr>
-                      <td data-label="Korisničko">jovan11</td>
-                      <td data-label="Email">jovan@gmail.com</td>
-                      <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">...</button></a></td>
-                      <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">X</button></a></td>
-                      <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">I</button></a></td>
-                  </tr>
-           
-                  <tr>
-                    <td data-label="Korisničko">gorani</td>
-                    <td data-label="Email">goran@gmail.com</td>
-                    <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">...</button></a></td>
-                    <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">X</button></a></td>
-                    <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">I</button></a></td>
-                </tr>
-           
-                <tr>
-                  <td data-label="Korisničko">milan1</td>
-                  <td data-label="Email">milan@gmail.com</td>
-                  <td data-label="Detalji"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">...</button></a></td>
-                  <td data-label="Brisanje"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">X</button></a></td>
-                  <td data-label="Izmena"><a href="korisnik.html"><button type="button"  class="btn btnKorisnici">I</button></a></td>
-              </tr>
                 </tbody>
               </table>
               </div>
-              <p id="prostorBtn"><button type="button"  class="btn btnDodaj">DODAJ NOVOG KORISNIKA</button></p>
+              <p id="prostorBtn"><a href="korisnikIzmenaDodavanje.html"<button type="button"  class="btn btnDodaj">DODAJ NOVOG KORISNIKA</button></a></p>
             
 
 
+          </div>
+
+          
+
+
+
+<!-- Modal -->
+          <div class="modal fade" id="exampleModal" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Brisanje Korisnika</h5>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Da li Zelite da Obrisete Korisnika?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+                  <button type="button"class="btn btnKorisnici" data-dismiss="modal">Obrisi</button>
+                </div>
+              </div>
+            </div>
           </div>
 
 
@@ -230,7 +235,16 @@
     </div>      
 
 
+    <script>
 
+      $('#myModal').on('shown.bs.modal', function () {
+              $('#myInput').trigger('focus')
+            })
+
+    </script>
+
+
+<script src="js/korisnici.js"></script>
       
 
     <!-- Footer -->
