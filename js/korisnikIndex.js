@@ -39,6 +39,10 @@ var korisnikP = getParamValue('prezime');
 var prezimeSpan = document.getElementById('prezimeSpan');
 prezimeSpan.innerText = korisnikP;
 
+var korisnikIP = getParamValue('ime');
+var pimeSpan = document.getElementById('ime2Span');
+ime2Span.innerText = korisnikIP;
+
 var korisnikL = getParamValue('lozinka');
 var lozinkaSpan = document.getElementById('lozinkaSpan');
 lozinkaSpan.innerText = korisnikL;

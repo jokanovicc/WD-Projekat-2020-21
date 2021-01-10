@@ -115,16 +115,17 @@ nav{
 
 .card-img-top {
     width: 100%;
-    height: 40vh;
+    height: 100%;
     transform: scale(1.0);
     }
 
 
  
     .card{
+        
         width: 92%;
         margin-top: 20px;
-        height: 85%;
+        height: 80%;
         background-color:  #e9ecef;
     
     }

@@ -87,56 +87,59 @@
 
           <div class="container Unosi">
               <h1 style="color: #C0424E;"  id="izmenaH1">Unesite/Izmenite detalje o knjizi:</h1>
-            <form>
+            <form id="knjigaForme">
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Naziv Knjige</label>
-                  <input type="text" class="form-control"  id="exampleFormControlInput1" placeholder="Knjiga" required>
+                  <input type="text" class="form-control"  id="nazivKnjige" value="">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">ISBN Broj</label>
-                    <input type="number" style="width: 50%;" class="form-control" id="exampleFormControlInput1" placeholder="13 cifara" required>
+                    <input type="number" style="width: 50%;" class="form-control" id="isbn" placeholder="13 cifara">
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Izdavacka Kuca</label>
-                    <input type="text" class="form-control"  id="exampleFormControlInput1" placeholder="Izdavac" required>
+                    <input type="text" class="form-control"  id="izdavac" placeholder="Izdavac" >
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Autor</label>
-                    <input type="text" class="form-control"  id="exampleFormControlInput1" placeholder="Autor" required>
+                    <input type="text" class="form-control"  id="autor" placeholder="Autor" >
                   </div>
                   <div class="form-group">
                     <label for="jezik">Jezik </label>
-                    <input type="text" class="form-control" id="jezik" placeholder="Srpski jezik " required>
+                    <input type="text" class="form-control" id="jezik" placeholder="Srpski jezik ">
                 </div>  
                 <div class="form-group">
                   <label for="opis">Opis </label>
-                  <textarea class="form-control" id="opis" rows="2" required></textarea>
+                  <textarea class="form-control" id="opis" rows="2"></textarea>
                 </div>
               
                 <div class="form-group">
                   <label for="godinaIzdavanja">Godina Izdavanja: </label>
-                  <input input type="number" placeholder="YYYY" id="godinaIzdavanja" min="1970" max="2025" required>
+                  <input input type="number" placeholder="YYYY" id="godinaIzdavanja" min="1970" max="2025">
                 </div>
                 <div class="form-group">
                   <label for="stranica">Broj stranica: </label>
-                  <input input type="number" placeholder="500" id="stranica" min="0" max="2000"  required>
+                  <input input type="number" placeholder="500" id="stranica" min="0" max="2000">
                 </div>
-
+ 
                 <div class="form-group">
                     <label for="povez">Tip Poveza:</label>
-                    <select id="povez" name="povezi" required>
+                    <select id="povez" name="povezi">
                         <option value="tvrdi">Tvrdi</option>
                         <option value="meki">Meki</option>
                       </select>
                 </div>   
                 <div class="form-group">
                     <label for="pismo">Pismo: </label>
-                    <select id="pismo" name="pismo" required>
+                    <select id="pismo" name="pismo">
                         <option value="latinica">Latinica</option>
                         <option value="cirilica">Ćirilica</option>
                       </select>
-                </div>           
-                <input type="submit" class="dodajBTN btn btn-primary" name="Dodaj">
+                </div>
+                
+                
+
+                <button class="btn dugme" id="dugmeReg" type="submit" style="margin-left: 38%;">Dalje</button>
               </form>
 
 
@@ -154,102 +157,95 @@
 
 
 
-    <!-- POP UP LOGIN -->
-    <div class="modal fade" id="modalLoginForm">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body mx-3">
-            <div class="md-form mb-5">
-              <label data-error="wrong" data-success="right" for="korIme" class="labela">Korisničko ime</label>
-              <input type="text" id="korIme" class="form-control validate">
-            
-            </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">Registruj se </h3>
+                </div>
+                <form id="registerForm">
+                <div class="modal-body">
+                  
     
-            <div class="md-form mb-4">
-              <label data-error="wrong" data-success="right" for="sifra" class="labela"  >Šifra</label>
-              <input type="password" id="sifra" class="form-control validate">
-            </div>
+                    <label for="korime" class="labela">Korisnicko Ime</label>
+                    <input type="text" id="txtUsername" class="form-control" id="korime" >
     
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn dugme">Dalje</button>
-          </div>
-        </div>
-      </div>
-    </div>       
-
-    <!-- pop up register -->
-
-
-
-
-    <div class="modal fade" id="modalRegisterForm">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100"><strong>Registrovanje</strong></h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body mx-3">
-            <div class="md-form mb-4">
-              <label  class="labela">Korisničko ime</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label for="defaultForm-pass" class="labela"  >Šifra</label>
-              <input type="password" id="defaultForm-pass" class="form-control validate">
-            </div>
-            <div class="md-form mb-4">
-              <label class="labela">Email</label>
-              <input type="email"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label class="labela">Ime</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label  class="labela">Prezime</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="form-group row">
-              <label for="example-date-input" class="labelaDatum">Datum Rodjenja</label>
-              <div class="col-10">
-                <input class="form-control validate" type="date" value="2020-08-19">
+    
+                      <label for="txtPassword" class="labela">Lozinka</label>
+                      <input type="text"  class="form-control" id="txtPassword" placeholder="Lozinka">
+    
+    
+    
+                        <label for="txtEmail" class="labela">Email</label>
+                        <input type="text" class="form-control"  id="txtEmail">
+    
+    
+                        <label for="txtPrezime" class="labela">Prezime</label>
+                        <input type="text" class="form-control"  id="txtPrezime" >
+    
+    
+                        <label for="txtIme" class="labela">Ime</label>
+                        <input type="text" class="form-control"  id="txtIme" >
+    
+    
+                        <label for="txtAdresa" class="labela">Adresa</label>
+                        <input type="text" class="form-control"  id="txtAdresa" >
+    
+                        <label for="txtBrtel" class="labela">Broj telefona</label>
+                        <input type="number" class="form-control"  id="txtBrtel" >
+    
+                        <label for="datum" class="labela">Datum Rodjenja</label>
+                        <input type="date" class="form-control" id="datum">
+    
+    
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn dugme" id="dugmeReg" type="submit" style="margin-left: 38%;">Dalje</button>
+                    </div>
+                 </form>
               </div>
             </div>
-            <div class="md-form mb-4">
-              <label class="labela">Adresa</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label  class="labela">Broj telefona</label>
-              <input type="number"  class="form-control validate">          
-            </div>
-    
-
-    
           </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn dugme">Dalje</button>
+    
+    
+    
+    
+    
+    
+        <!-- POP UP LOGIN -->
+        <div class="modal fade" id="modalLoginForm">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
+              </div>
+              <form action="https://knjizara-6adf7-default-rtdb.firebaseio.com/korisnici.json" method="GET" id="loginForm" style="padding:30px">
+                  <label for="korIme" class="labela">Korisničko ime</label>
+                  <input type="text" id="txtUsername"  class="form-control">
+                
+        
+                  <label style="padding-top: 20px;" for="sifra" class="labela"  >Šifra</label>
+                  <input type="password" id="txtPassword" class="form-control">
+      
+                <button class="btn dugme" type="submit" style="margin-left: 38%;">Dalje</button>
+            </form>
           </div>
         </div>
-      </div>
-    </div>   
-
 
 
       
 
     <!-- Footer -->
-    <script src="js/korisnikIndex.js"></script>
+    <script src="js/knjigaIzmena.js">
+    
+    </script>
+    <script src="js/login.js"></script>
+    <script src="js/validacijeKorisnik.js"></script>
+
+
+    <script src="js/validacijaKnjige.js"></script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

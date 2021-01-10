@@ -40,19 +40,18 @@ loginForm.addEventListener('submit', function(e) {
 					var name = '';
 					// Prolazimo kroz dobijenu listu korisnika i za svakog od njih proveravamo
 					// da li mu odgovaraju prosledjeni login podaci
-					for(var i=0; i<users.length; i++) {
-						var user = users[i];
-						if(user.email == username && user.username == password) {
+					for(let key in users){
+						console.log('blaaa');
+						if(users[key].username == username && users[key].password == password) {
 							// Ukoliko smo pronasli odgovarajuceg korisnika, spremimo njegovo ime u kontrolnu promenljivu
 							// i zavrsimo sa petljom.
-                            name = user.name;
-                            console.log(user);
+							name = users[key].ime;
 							break;
 						}
 					}
 					// Ukoliko nismo pronasli korisnika, javimo da nisu ispravni podaci
 					if(name == '') {
-                        alert('Neispravni login podaci.');
+						alert('Neispravni login podaci.');
 					}else {
 						// Ukoliko jesmo, redirektujemo se na index.html stranicu
 						// U URL cemo smestiti ime prijavljenog korisnika, kako bi mogli da ga procitamo na toj stranici.

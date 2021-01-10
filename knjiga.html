@@ -88,61 +88,59 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="kontejnerSlika">
-                        <img src="slike/ducic.jpg" class="slikaKnjige" title="Slika Korica Knjige">
+                        <img id="slikaKnjige" src="" class="slikaKnjige" title="Slika Korica Knjige">
                       </div>
                   </div>
                   <div class="col-lg-6 leva">
                     
-                    <h2 style="color: #C0424E;">Pesme</h2>
+                    <h2 style="color: #C0424E;"><span id="nazivSpan"></span></h2>
                     
                     <table style="width:100%" class="detalji">
                       <tr>
                         <th>Pisac:</th>
-                        <td>Jovan Dučić</td>
+                        <td><span id="autorSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Godina Izdavanja:</th>
-                        <td>2019.</td>
+                        <td><span id="godinaSpan"></span></td>
                       </tr>
                       <tr>
                         <th>ISBN:</th>
-                        <td>555 77 854</td>
+                        <td><span id="isbnSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Izdavačka kuća:</th>
-                        <td>Laguna</td>
+                        <td><span id="izdavacSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Broj strana:</th>
-                        <td>230</td>
+                        <td><span id="brojStanicaSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Tip Poveza:</th>
-                        <td>Tvrdi</td>
+                        <td><span id="tipPovezaSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Pismo:</th>
-                        <td>Cirilica</td>
+                        <td><span id="pismoSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Jezik:</th>
-                        <td>srpski</td>
+                        <td><span id="jezikSpan"></span></td>
                       </tr>
                       <tr>
                         <th>Оcena:</th>
-                        <td>4,80</td>
+                        <td><span id="ocenaSpan"></span></td>
                       </tr>
                     </table>
-                    <button type="button" class="btnKupovina btn btn-primary cenaDG">Cena: 500.00</button>
+                    <button type="button" class="btnKupovina btn btn-primary cenaDG">Cena: <span id="cenaSpan"></span>.00</button>
                     <button type="button" class="btnKupovina btn btn-primary korpaDG">Dodaj u Korpu</button>
                   </div>
 
 
             </div>
             <h3 style="padding-left: 10px; color: #C0424E;" >Kratak opis</h3>
-            <p class="opis" style="padding-left: 10px;">Јован Дучић био је српски и југословенски писац, песник и дипломата. Један је од најзначајнијих песника српског модернизма и најзначајнији лиричар.Био је и један од оснивача Народне одбране, националне невладине организације у Краљевини Србији.
-
-              Прву збирку песама Дучић је објавио у Мостару 1901. године у издању мостарске „Зоре”, затим другу у Београду 1908. године у издању Српске књижевне задруге. Писао је доста и у прози: неколико литерарних есеја и студија о писцима, Благо цара Радована и песничка писма из Швајцарске, Грчке и Шпаније.</p>
+            <p class="opis" style="padding-left: 10px;"><span id="opisSpan"></span></p>
 
           </div>
 
@@ -156,101 +154,90 @@
           </footer>
 
 
-    <!-- POP UP LOGIN -->
-    <div class="modal fade" id="modalLoginForm">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body mx-3">
-            <div class="md-form mb-5">
-              <label data-error="wrong" data-success="right" for="korIme" class="labela">Korisničko ime</label>
-              <input type="text" id="korIme" class="form-control validate">
-            
-            </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">Registruj se </h3>
+                </div>
+                <form id="registerForm">
+                <div class="modal-body">
+                  
     
-            <div class="md-form mb-4">
-              <label data-error="wrong" data-success="right" for="sifra" class="labela"  >Šifra</label>
-              <input type="password" id="sifra" class="form-control validate">
-            </div>
+                    <label for="korime" class="labela">Korisnicko Ime</label>
+                    <input type="text" id="txtUsername" class="form-control" id="korime" >
     
-          </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn dugme">Dalje</button>
-          </div>
-        </div>
-      </div>
-    </div>       
-
-    <!-- pop up register -->
-
-
-
-
-    <div class="modal fade" id="modalRegisterForm">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100"><strong>Registrovanje</strong></h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body mx-3">
-            <div class="md-form mb-4">
-              <label  class="labela">Korisničko ime</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label for="defaultForm-pass" class="labela"  >Šifra</label>
-              <input type="password" id="defaultForm-pass" class="form-control validate">
-            </div>
-            <div class="md-form mb-4">
-              <label class="labela">Email</label>
-              <input type="email"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label class="labela">Ime</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label  class="labela">Prezime</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="form-group row">
-              <label for="example-date-input" class="labelaDatum">Datum Rodjenja</label>
-              <div class="col-10">
-                <input class="form-control validate" type="date" value="2020-08-19">
+    
+                      <label for="txtPassword" class="labela">Lozinka</label>
+                      <input type="text"  class="form-control" id="txtPassword" placeholder="Lozinka">
+    
+    
+    
+                        <label for="txtEmail" class="labela">Email</label>
+                        <input type="text" class="form-control"  id="txtEmail">
+    
+    
+                        <label for="txtPrezime" class="labela">Prezime</label>
+                        <input type="text" class="form-control"  id="txtPrezime" >
+    
+    
+                        <label for="txtIme" class="labela">Ime</label>
+                        <input type="text" class="form-control"  id="txtIme" >
+    
+    
+                        <label for="txtAdresa" class="labela">Adresa</label>
+                        <input type="text" class="form-control"  id="txtAdresa" >
+    
+                        <label for="txtBrtel" class="labela">Broj telefona</label>
+                        <input type="number" class="form-control"  id="txtBrtel" >
+    
+                        <label for="datum" class="labela">Datum Rodjenja</label>
+                        <input type="date" class="form-control" id="datum">
+    
+    
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn dugme" id="dugmeReg" type="submit" style="margin-left: 38%;">Dalje</button>
+                    </div>
+                 </form>
               </div>
             </div>
-            <div class="md-form mb-4">
-              <label class="labela">Adresa</label>
-              <input type="text"  class="form-control validate">          
-            </div>
-            <div class="md-form mb-4">
-              <label  class="labela">Broj telefona</label>
-              <input type="number"  class="form-control validate">          
-            </div>
-    
-
-    
           </div>
-          <div class="modal-footer d-flex justify-content-center">
-            <button class="btn dugme">Dalje</button>
+    
+    
+    
+    
+    
+    
+        <!-- POP UP LOGIN -->
+        <div class="modal fade" id="modalLoginForm">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
+              </div>
+              <form action="https://knjizara-6adf7-default-rtdb.firebaseio.com/korisnici.json" method="GET" id="loginForm" style="padding:30px">
+                  <label for="korIme" class="labela">Korisničko ime</label>
+                  <input type="text" id="txtUsername"  class="form-control">
+                
+        
+                  <label style="padding-top: 20px;" for="sifra" class="labela"  >Šifra</label>
+                  <input type="password" id="txtPassword" class="form-control">
+      
+                <button class="btn dugme" type="submit" style="margin-left: 38%;">Dalje</button>
+            </form>
           </div>
         </div>
-      </div>
-    </div>    
 
 
 
       
 
     <!-- Footer -->
+    <script src="js/knjigeIndex.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/validacijeKorisnik.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
