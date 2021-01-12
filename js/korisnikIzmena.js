@@ -29,7 +29,7 @@ function getParamValue(name) {
 
 
   var korisnikI = getParamValue('ime');
-  var imeSpan = document.getElementById('textIme');
+  var imeSpan = document.getElementById('txtIme');
   imeSpan.value = korisnikI;
 
 

@@ -1,7 +1,7 @@
-var loginForm = document.getElementById('registerForm');
+var registerForm = document.getElementById('registerForm');
 
 // Na logovanje cemo reagovati tako sto uhvatimo 'submit' dogadjaj na login formu
-loginForm.addEventListener('submit', function(e) {
+registerForm.addEventListener('submit', function(e) {
 	// Sprecicemo slanje forme na server, jer zelimo mi da imamo kontrolu na time
 	e.preventDefault();
 
@@ -30,9 +30,11 @@ loginForm.addEventListener('submit', function(e) {
 			alert('Morate uneti lozinku');
 	}
 
-	else if (email == '' || email.includes("@")==false || email.includes(".com")==false) {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Neispravan format imejl adrese');
+	else if (ValidateEmail(email) == false) {
+		alert('Neispravan mejl');
+
+
+
 
 	}
 
@@ -63,14 +65,26 @@ loginForm.addEventListener('submit', function(e) {
 
 	else if(date > datum1 || date < datum2){
 		alert('Neispravan opseg datuma rodjenja')
-	}else{
-		alert('Uspesno ste registrovani');
+	}
+	else{
 		window.location.replace(
-			"glavnaStrana.html?user=" + ime
+			"glavnaStrana.html?user=" + username
 		);
 	}
 
-
-
 }
 );
+
+
+
+
+
+
+function ValidateEmail(mail) 
+{
+ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail))
+  {
+    return (true)
+  }
+    return (false)
+}

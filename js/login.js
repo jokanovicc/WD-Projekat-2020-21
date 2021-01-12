@@ -11,8 +11,8 @@ loginForm.addEventListener('submit', function(e) {
 		Kada smo selektovali polja koja nam trebaju, atribut value ce nam dati
 		ono sto pise u njima (isto kao getText() i Javi).
 	*/
-	var username = document.getElementById('txtUsername').value.trim();
-	var password = document.getElementById('txtPassword').value.trim();
+	var username = document.getElementById('txtUsername1').value.trim();
+	var password = document.getElementById('txtPassword1').value.trim();
 
 	// Stringove u JavaScriptu mozemo porediti sa == i !=
 	if(username == '' || password == '') {

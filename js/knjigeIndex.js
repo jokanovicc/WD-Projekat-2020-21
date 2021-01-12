@@ -10,7 +10,7 @@ function getParamValue(name) {
         var s = splitted[i].split("=");
         console.log(s);
 		var pName  = s[0];
-		var pValue = s[1].split();
+		var pValue = s[1];
 		if(pName == name) {
 			return pValue;
 		}

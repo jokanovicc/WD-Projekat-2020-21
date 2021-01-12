@@ -1,0 +1,30 @@
+
+      .ocenjivanje{
+        display: flex;
+        }
+        
+        .ocenjivanje li {
+        list-style-type: none
+        }
+        
+        .ocenjivanje-item {
+        cursor: pointer;
+        font-size:3.5em;
+        color: #C0424E;
+        }
+        
+        /* initial: make all stars full */
+        .ocenjivanje-item::before {
+        content: "\2605";
+        /* OVO SU IKONICE ZVEZDA */
+        }
+        
+        /* make until the clicked star (the rest) empty */
+        .ocenjivanje-item.active ~ .ocenjivanje-item::before {
+        content: "\2606";
+        }
+
+
+        .zvezdicaDiv{
+            margin-left: 21vw;
+        }

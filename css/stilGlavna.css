@@ -8,6 +8,11 @@ body{
     background-color: #044855;
 }
 
+
+.checked {
+    color:#C0424E;
+  }
+
 nav{
     background-color: #C0424E;
     color: white;
