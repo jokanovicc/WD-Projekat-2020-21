@@ -13,7 +13,6 @@ var app = new Vue({
         .then(response => {
           this.users = response.data;
           // handle success
-          console.log(response);
 
 
         })

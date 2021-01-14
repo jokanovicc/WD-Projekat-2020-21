@@ -41,7 +41,6 @@ loginForm.addEventListener('submit', function(e) {
 					// Prolazimo kroz dobijenu listu korisnika i za svakog od njih proveravamo
 					// da li mu odgovaraju prosledjeni login podaci
 					for(let key in users){
-						console.log('blaaa');
 						if(users[key].username == username && users[key].password == password) {
 							// Ukoliko smo pronasli odgovarajuceg korisnika, spremimo njegovo ime u kontrolnu promenljivu
 							// i zavrsimo sa petljom.

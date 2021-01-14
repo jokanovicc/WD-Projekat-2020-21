@@ -24,15 +24,17 @@
         <!-- NAVIGACIJA--------------------------------- -->
 
 
+
         <nav class="navbar navbar-expand-lg navbar-light text-white">
-          <a class="navbar-brand text-white" href="#">Лексикограф</a>
+          <a class="navbar-brand text-white" href="glavnaStrana.html">Лексикограф</a>
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse " id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link korpa" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart4" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <a class="nav-link korpa" href="korpa.html"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart4" fill="white" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
                   </svg></a>
               </li>
@@ -48,8 +50,8 @@
                         Knjige
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="knjige.html">Prikaži sve</a>
                         <a class="dropdown-item" href="knjigaIzmenaDodavanje.html">Dodaj</a>
-                        <a class="dropdown-item" href="knjigaIzmenaDodavanje.html">Izmeni</a>
                       </div>
                     </li>
 
@@ -60,8 +62,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="korisnici.html">Prikaži sve</a>
-                      <a class="dropdown-item" href="#">Izmeni</a>
-                      <a class="dropdown-item" href="#">Dodaj</a>
+                      <a class="dropdown-item" href="korisnikIzmenaDodavanje.html">Dodaj</a>
                     </div>
                   </li>                  
               </ul>
@@ -77,7 +78,7 @@
                   <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#modalLoginForm">Uloguj se</a>
                 </li>
                 <li class="nav-item">
-                  <button type="button" class="btn btn-primary" style="margin-left: 10px; background-color: #C0424E; margin-top: 2px; border: 0px;" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" class="btn btn-primary" style="margin-left: 10px; background-color: #C0424E; margin-top: 2px; border: 0px;" data-toggle="modal" data-target="#exampleModal1">
                     Registruj se
                   </button>
                 </li>
@@ -102,20 +103,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="ISBN">2432543532434</td>
-                        <td data-label="Naziv">Ana Karenjina</td>
-                        <td data-label="Izdavac">Laguna</td>
-                        <td data-label="Ukupno">800.00</a></td>
-                        <td data-label="Brisanje"><button type="button" class="btn btnKorisnici" data-toggle="modal" data-target="#exampleModal1">
+                        <td data-label="ISBN">9788610034226</td>
+                        <td data-label="Naziv">Na Drini ćuprija</td>
+                        <td data-label="Izdavac">Vulkan</td>
+                        <td data-label="Ukupno">935.00</a></td>
+                        <td data-label="Brisanje"><button type="button" class="btn btnKorisnici" data-toggle="modal" data-target="#exampleModalBrisanje">
                           X
                         </button></td>                    </tr>
            
                     <tr>
-                      <td data-label="ISBN">2432111434</td>
-                      <td data-label="Naziv">Pesme</td>
-                      <td data-label="Izdavac">Školska knjiga</td>
-                      <td data-label="Ukupno">800.00</a></td>
-                      <td data-label="Brisanje"><button type="button" class="btn btnKorisnici" data-toggle="modal" data-target="#exampleModal1">
+                      <td data-label="ISBN">9780241470022</td>
+                      <td data-label="Naziv">Azadi</td>
+                      <td data-label="Izdavac">Penguin</td>
+                      <td data-label="Ukupno">935.00</a></td>
+                      <td data-label="Brisanje"><button type="button" class="btn btnKorisnici" data-toggle="modal" data-target="#exampleModalBrisanje">
                         X
                       </button></td>
 
@@ -126,7 +127,7 @@
                     </tr>
                   <tr>
                 
-                      <td class="suma"  colspan="6" data-label="Sumarum"><h4 class="cena" >Ukupna cena: 1600.00</h4></td>
+                      <td class="suma"  colspan="6" data-label="Sumarum"><h4 class="cena" >Ukupna cena: 1870.00</h4></td>
                   </tr>
                 </tbody>
               </table>
@@ -136,30 +137,98 @@
 
           </div>
 
-
-    <!-- POP UP LOGIN -->
-    <div class="modal fade" id="modalLoginForm">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
+          <div class="modal fade" id="exampleModalBrisanje" >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Brisanje artikla</h5>
+                  </button>
+                </div>
+                <div class="modal-body labela">
+                  Da li Zelite da Obrisete Knjigu iz korpe?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+                  <button type="button"class="btn btnKorisnici" data-dismiss="modal">Obrisi</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <form action="https://knjizara-6adf7-default-rtdb.firebaseio.com/korisnici.json" method="GET" id="loginForm" style="padding:30px">
-              <label for="korIme" class="labela">Korisničko ime</label>
-              <input type="text" id="txtUsername"  class="form-control">
-            
+
+          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">Registruj se </h3>
+                </div>
+                <form id="registerForm">
+                <div class="modal-body">
+                  
     
-              <label style="padding-top: 20px;" for="sifra" class="labela"  >Šifra</label>
-              <input type="password" id="txtPassword" class="form-control">
+                    <label for="korime" class="labela">Korisnicko Ime</label>
+                    <input type="text" id="txtUsername" class="form-control" id="korime" >
     
-
-            <button class="btn dugme" type="submit" style="margin-left: 38%;">Dalje</button>
-        </form>
-      </div>
-    </div>      
-
-    <!-- pop up register -->
-
+    
+                      <label for="txtPassword" class="labela">Lozinka</label>
+                      <input type="text"  class="form-control" id="txtPassword" placeholder="Lozinka">
+    
+    
+    
+                        <label for="txtEmail" class="labela">Email</label>
+                        <input type="text" class="form-control"  id="txtEmail">
+    
+    
+                        <label for="txtPrezime" class="labela">Prezime</label>
+                        <input type="text" class="form-control"  id="txtPrezime" >
+    
+    
+                        <label for="txtIme" class="labela">Ime</label>
+                        <input type="text" class="form-control"  id="txtIme" >
+    
+    
+                        <label for="txtAdresa" class="labela">Adresa</label>
+                        <input type="text" class="form-control"  id="txtAdresa" >
+    
+                        <label for="txtBrtel" class="labela">Broj telefona</label>
+                        <input type="number" class="form-control"  id="txtBrtel" >
+    
+                        <label for="datum" class="labela">Datum Rodjenja</label>
+                        <input type="date" class="form-control" id="datum">
+    
+    
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn dugme" id="dugmeReg" type="submit" style="margin-left: 38%;">Dalje</button>
+                    </div>
+                 </form>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+    
+    
+    
+        <!-- POP UP LOGIN -->
+        <div class="modal fade" id="modalLoginForm">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100"><strong>LOGIN</strong></h4>
+              </div>
+              <form action="https://knjizara-6adf7-default-rtdb.firebaseio.com/korisnici.json" method="GET" id="loginForm" style="padding:30px">
+                  <label for="korIme" class="labela">Korisničko ime</label>
+                  <input type="text" id="txtUsername1"  class="form-control">
+                
+        
+                  <label style="padding-top: 20px;" for="sifra" class="labela"  >Šifra</label>
+                  <input type="password" id="txtPassword1" class="form-control">
+      
+                <button class="btn dugme" type="submit" style="margin-left: 38%;">Dalje</button>
+            </form>
+          </div>
+        </div>   
 
 
   <script src="js/login.js"></script>

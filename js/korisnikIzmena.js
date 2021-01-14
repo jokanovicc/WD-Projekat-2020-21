@@ -7,7 +7,6 @@ function getParamValue(name) {
   
     for(i=0; i < splitted.length; i++) {
           var s = splitted[i].split("=");
-          console.log(s);
       var pName  = s[0];
       var pValue = s[1].split();
       if(pName == name) {

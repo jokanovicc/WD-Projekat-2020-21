@@ -14,6 +14,7 @@ kontejner.onclick = e => {
 
 
 }
-document.getElementById("natpis").innerHTML = "Ocenili ste sa " + ocena;
+if(ocena == '5' || ocena == '4' || ocena == '3' || ocena == '2' || ocena == '1' )
+      document.getElementById("natpis").innerHTML = "Ocenili ste sa " + ocena;
 
 };

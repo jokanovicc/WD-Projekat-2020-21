@@ -11,7 +11,6 @@ var app = new Vue({
         .then(response => {
           this.knjige = response.data;
           // handle success
-          console.log(response);
 
 
         })

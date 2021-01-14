@@ -8,7 +8,6 @@ function getParamValue(name) {
 
 	for(i=0; i < splitted.length; i++) {
         var s = splitted[i].split("=");
-        console.log(s);
 		var pName  = s[0];
 		var pValue = s[1];
 		if(pName == name) {
@@ -67,8 +66,55 @@ var piSpan = document.getElementById('pismoSpan');
 piSpan.innerText = knjigaPi;
 
 var knjigaO = getParamValue('ocena');
+
 var oSpan = document.getElementById('ocenaSpan');
-oSpan.innerText = knjigaO;
+
+if(knjigaO == '5'){
+	oSpan.innerHTML+= `<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>	
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	
+	`;
+}
+if(knjigaO == '4'){
+	oSpan.innerHTML+= `<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>	
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>
+	
+	`;
+}
+if(knjigaO == '3'){
+	oSpan.innerHTML+= `<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>	
+	<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>
+	<span class="fa fa-star"></span>
+	
+	`;
+}
+
+if(knjigaO == '2'){
+	oSpan.innerHTML+= `<span class="fa fa-star checked"></span>
+	<span class="fa fa-star checked"></span>	
+	<span class="fa fa-star"></span>
+	<span class="fa fa-star"></span>
+	<span class="fa fa-star"></span>
+	
+	`;
+}
+if(knjigaO == '1'){
+	oSpan.innerHTML+= `<span class="fa fa-star checked"></span>
+	<span class="fa fa-star"></span>	
+	<span class="fa fa-star"></span>
+	<span class="fa fa-star"></span>
+	<span class="fa fa-star"></span>
+	
+	`;
+}
 
 
 var knjigaTP = getParamValue('tipPoveza');
