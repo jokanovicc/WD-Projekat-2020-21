@@ -37,8 +37,8 @@
 
 
 .slikaKnjige{
-    height: 100%; width: 100%;
-    object-fit: contain;
+    width: 320px; 
+    height: 500px;
 }
 .detalji{
     background-color:#C0C0C0;
@@ -96,6 +96,10 @@ h3{
     background-color: #C0424E;
 }
 
+.natpis{
+    font-size: 20px;
+}
+
 
 .my-4{
     width: 70%;
@@ -117,6 +121,9 @@ h3{
     }
     .opis{
         text-align: left;
+    }
+    .natpis{
+        font-size: 10px;
     }
 
 }

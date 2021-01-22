@@ -1,6 +1,7 @@
 
       .ocenjivanje{
         display: flex;
+        
         }
         
         .ocenjivanje li {
@@ -11,6 +12,7 @@
         cursor: pointer;
         font-size:3em;
         color: #C0424E;
+        
         }
         
         /* initial: make all stars full */
@@ -22,6 +24,7 @@
         /* make until the clicked star (the rest) empty */
         .ocenjivanje-item.active ~ .ocenjivanje-item::before {
         content: "\2606";
+        
         }
 
 

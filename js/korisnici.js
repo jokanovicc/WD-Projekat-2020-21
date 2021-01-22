@@ -23,10 +23,6 @@ var app = new Vue({
         })
 
 
-    },
-
-    userDetails: function(usernaame){
-      window.location.replace("knjige.html?user =" + usernaame)
     }
 
   })

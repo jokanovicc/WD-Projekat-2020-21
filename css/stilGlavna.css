@@ -20,6 +20,12 @@ nav{
 
 }
 
+
+.telefon{
+    display: none;
+
+}
+
 .navbar-brand{
     position: absolute;
     left: 50%;
@@ -130,7 +136,7 @@ nav{
         
         width: 92%;
         margin-top: 20px;
-        height: 80%;
+        height: 92%;
         background-color:  #e9ecef;
     
     }
@@ -219,6 +225,28 @@ nav{
         margin: auto;
 
     }
+    .telefon{
+        display: block;
+        font-family: 'Pacifico', cursive;
+        font-size: 25px;
+        color: white;
 
+    
+    }
+    .telefon:hover{
+        display: block;
+        font-family: 'Pacifico', cursive;
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+        color: #044855;
+    
+    }
+
+
+    .telefon1{
+        margin-top: 10px;
+        margin-left: 13px;
+    }
 
 }
