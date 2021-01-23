@@ -3,7 +3,9 @@
 }
 
 
-
+.navbar-nav a:hover{
+    text-decoration: underline;
+}
 body{
     background-color: #044855;
 }
@@ -26,6 +28,7 @@ nav{
 
 }
 
+
 .navbar-brand{
     position: absolute;
     left: 50%;
@@ -36,6 +39,14 @@ nav{
     color: white;
 
     
+}
+
+.jumbotron{
+    border-radius: 0%;
+}
+
+.navbar-brand:hover{
+    text-decoration: underline;
 }
 
 .korpa{
@@ -161,6 +172,7 @@ nav{
 
 .naziv:hover{
     color: #C0424E;
+    text-decoration: underline;
 }
 
 .pisac{
