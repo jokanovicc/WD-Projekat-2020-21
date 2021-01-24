@@ -239,16 +239,12 @@ nav{
     }
     .telefon{
         display: block;
-        font-family: 'Pacifico', cursive;
-        font-size: 25px;
         color: white;
 
     
     }
     .telefon:hover{
         display: block;
-        font-family: 'Pacifico', cursive;
-        font-size: 25px;
         color: white;
         text-decoration: none;
         color: #044855;
@@ -258,7 +254,6 @@ nav{
 
     .telefon1{
         margin-top: 10px;
-        margin-left: 13px;
     }
 
 }

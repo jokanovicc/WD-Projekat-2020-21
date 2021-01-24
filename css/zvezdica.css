@@ -1,6 +1,7 @@
 
       .ocenjivanje{
         display: flex;
+        margin-left: none;
         
         }
         
@@ -14,13 +15,15 @@
         color: #C0424E;
         
         }
-        
-        /* initial: make all stars full */
+
+
+        /* The ::before selector inserts something before the content of each selected element(s). */
         .ocenjivanje-item::before {
         content: "\2605";
         /* OVO SU IKONICE ZVEZDA */
         }
         
+        /* Selects every <ul> element that are preceded by a <p> element */
         /* make until the clicked star (the rest) empty */
         .ocenjivanje-item.active ~ .ocenjivanje-item::before {
         content: "\2606";
@@ -28,6 +31,11 @@
         }
 
 
-        .zvezdicaDiv{
-            margin-left: 21vw;
+        /* .zvezdicaDiv{
+            margin-left: 320px;
+        } */
+
+        .zvezda{
+          text-align: center;
+          margin-left: 5px;
         }

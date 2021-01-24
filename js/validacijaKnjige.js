@@ -16,58 +16,81 @@ loginForm.addEventListener('submit', function(e) {
 	var brojStrana = document.getElementById('stranica').value;
 
 
+	var ok = true;	
+	var poruka = "Molimo popravite sledece greske u unosu:\n";
+
+
 	// Stringove u JavaScriptu mozemo porediti sa == i !=
 	if(naziv == '') {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti naziv');
+		poruka += "- Morate uneti naziv\n";
+		ok = false;
 	}
-	else if (isbn == '') {
+	if (isbn == '') {
 			// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-			alert('Morate uneti isbn');
+			poruka += "- Morate uneti ISBN\n";
+			ok = false;
 	}
-
-	else if (izdavac == '') {
+	if (isbn.length != 13) {
 		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti izdavaca');
+		poruka += "- ISBN mora imati 13 cifara\n";
+		ok = false;
+}
+
+	if (izdavac == '') {
+		poruka += "- Morate uneti izdavača\n";
+		ok = false;
+
+	}
+	if (godinaIzdavanja < 1950 || godinaIzdavanja > 2020) {
+		poruka += "- Loš opseg godine izdavanja\n";
+		ok = false;
 
 	}
 
-	else if (autor == '') {
-			// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-			alert('Morate uneti autora');
+	if (autor == '') {
+		poruka += "- Morate uneti autora\n";
+		ok = false;
 
 	}
 
-	else if (jezik == '') {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti jezik');
+	if (jezik == '') {
+		poruka += "- Morate uneti jezik\n";
+		ok = false;
 
 }
 
-	else if (opis == '') {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti opis');
+	if (opis == '') {
+		poruka += "- Morate uneti opis\n";
+		ok = false;
 
 	}
 
 
-	else if (godinaIzdavanja == '') {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti godinu izdanja');
+	if (godinaIzdavanja == '') {
+		poruka += "- Morate uneti godinu izdavanja\n";
+		ok = false;
 
     }
     
-    else if (brojStrana == '') {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti broj Stranica');
+    if (brojStrana == '') {
+		poruka += "- Morate uneti broj stranica\n";
+		ok = false;
 
 	}
 
+	if (brojStrana <10 || brojStrana > 2000) {
+		poruka += "- Los unos broja strana\n";
+		ok = false;
 
+	}
+
+	if(ok == false) {
+		alert(poruka);
+	}
     
     
      else{
-		alert('Uspesno ste dodali novu knjigu');
+		alert('Uspešno ste izvršili akciju!');
 	 	window.location.replace(
 	 		"glavnaStrana.html"
 	 	);
@@ -77,3 +100,4 @@ loginForm.addEventListener('submit', function(e) {
 
 }
 );
+		

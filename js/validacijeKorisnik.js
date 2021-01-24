@@ -10,63 +10,90 @@ registerForm.addEventListener('submit', function(e) {
 	var password = document.getElementById('txtPassword').value.trim();
 	var email = document.getElementById('txtEmail').value.trim();
 	var ime = document.getElementById('txtIme').value;
-	var prezime = document.getElementById('txtPrezime');
-	var adresa = document.getElementById('txtAdresa');
-	var brojTelefona = document.getElementById('txtBrTel');
+	var prezime = document.getElementById('txtPrezime').value;
+	var adresa = document.getElementById('txtAdresa').value;
+	var brojTelefona = document.getElementById('txtBrtel').value;
 	var datum = document.getElementById('datum').value;
-	var dugme= document.getElementById('dugmeReg');
+	var dugme= document.getElementById('dugmeReg').value;
 
 	var date = new Date(datum);1
 	let datum1 = new Date(2003, 11, 17) ;
 	let datum2 = new Date(1920, 11, 17) ;
 
+	var ok = true;	
+	var poruka = "Molim prepravite sledece greske u unosu";
+
+
+
 	// Stringove u JavaScriptu mozemo porediti sa == i !=
 	if(username == '') {
-		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti korisnicko ime');
+			poruka += "\n- Morate uneti korisničko ime\n";
+			ok = false;
 	}
-	else if (password == '') {
+	if (password == '') {
 			// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-			alert('Morate uneti lozinku');
+			poruka += "- Morate uneti šifru\n";
+			ok = false;
 	}
 
-	else if (ValidateEmail(email) == false) {
-		alert('Neispravan mejl');
-
-
-
-
+	if (ValidateEmail(email) == false) {
+		poruka += "- Neispravan format mejla\n";
+		ok = false;
 	}
+	
 
-	else if (ime == '') {
+	if (ime == '') {
 			// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-			alert('Morate uneti ime');
+			poruka += "- Morate uneti ime\n";
+			ok = false;
 
 	}
 
-	else if (prezime == '') {
+	if (prezime == '') {
 		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti prezime');
+		poruka += "- Morate uneti prezime\n";
+		ok = false;
 
 }
 
-	else if (adresa == '') {
+	if (adresa == '') {
 		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti adresu');
+		poruka += "- Morate uneti adresu\n";
+		ok = false;
 
 	}
 
 
-	else if (brojTelefona == '') {
+	if (brojTelefona == "") {
 		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
-		alert('Morate uneti brojTelefona');
+		poruka += "- Morate uneti broj telefona\n";
+		ok = false;
 
 	}
 
-	else if(date > datum1 || date < datum2){
-		alert('Neispravan opseg datuma rodjenja')
+
+	if (datum == "") {
+		// Funkcija 'alert' prikazuje popup dijalog sa prosledjenom porukom
+		poruka += "- Morate uneti datum rođenja\n";
+		ok = false;
+
 	}
+
+
+	if(date > datum1 || date < datum2){
+		poruka += "- Neispravan opseg datuma\n";
+		ok = false;
+	}
+
+	if(ok == false) {
+		alert(poruka);
+	}
+
+
+
 	else{
+		alert('Uspešno ste izvršili akciju!');
+
 		window.location.replace(
 			"glavnaStrana.html?user=" + username
 		);
@@ -74,7 +101,6 @@ registerForm.addEventListener('submit', function(e) {
 
 }
 );
-
 
 
 

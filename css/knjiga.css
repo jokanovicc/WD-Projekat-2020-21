@@ -63,11 +63,10 @@ button:hover{
 }
 
 .korpaDG{
-    float: right;
+    float: none;
+    margin-left: 30%;
 }
-.cenaDG{
-    float: left;
-}
+
 
 h3{
     padding-top: 10px;
