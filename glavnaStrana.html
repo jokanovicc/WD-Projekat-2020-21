@@ -144,7 +144,7 @@
                       <a :href="'knjiga.html?naziv=' + knjiga.naziv + '&autor=' + knjiga.autor + '&brojStranica=' + knjiga.brojStranica + '&cena=' + knjiga.cena+ '&godinaIzdavanja=' + knjiga.godinaIzdavanja+ '&isbn=' + knjiga.isbn+ '&izdavac=' + knjiga.izdavackaKuca+ '&jezik=' + knjiga.jezik + '&pismo=' + knjiga.pismo+ '&tipPoveza=' + knjiga.tipPoveza+ '&ocena=' + knjiga.ocena+ '&opis=' + knjiga.opis+ '&slika=' + knjiga.slika"><h2 class="naziv">{{knjiga.naziv}}</h2></a>
                       <p class="pisac">{{knjiga.autor}}</p>
 
-                    <div style="margin-left: 34%;">
+                    <div class="col d-flex justify-content-center">
                       <div v-if="knjiga.ocena == 1">
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star"></span>
